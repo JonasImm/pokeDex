@@ -22,6 +22,7 @@ function App() {
           <ListItem href="#">
             <ListItemIcon src={BulbasaurSrc} alt="BulbasaurSrc" />
             <ListItemText primary="Bulbasaur" secondary="#001" />
+            <ListItemIcon src={BulbasaurSrc} alt="BulbasaurSrc" />
           </ListItem>
         </List>
       </main>

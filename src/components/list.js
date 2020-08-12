@@ -1,8 +1,8 @@
 import React from "react";
 import "./list.css";
 
-function List(props) {
-  return <nav className="pokedex__list">{props.children}</nav>;
+function List({ children }) {
+  return <nav className="pokedex__list">{children}</nav>;
 }
 
 export default List;

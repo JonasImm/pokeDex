@@ -1,10 +1,10 @@
 import React from "react";
 import "./listItem.css";
 
-function ListItem(props) {
+function ListItem({ href, children }) {
   return (
-    <a className="pokedex__listItem" href={props.href}>
-      {props.children}
+    <a className="pokedex__listItem" href={href}>
+      {children}
     </a>
   );
 }
