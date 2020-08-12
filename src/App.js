@@ -4,6 +4,7 @@ import List from "./components/list";
 import ListItem from "./components/listItem";
 import ListItemIcon from "./components/listItemIcon";
 import ListItemText from "./components/listItemText";
+import BulbasaurSrc from "./assets/bulbasaur.png";
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
       <main className="pokedex__main">
         <List>
           <ListItem href="#">
-            <ListItemIcon src="" alt="Bulbasaur" />
+            <ListItemIcon src={BulbasaurSrc} alt="BulbasaurSrc" />
             <ListItemText primary="Bulbasaur" secondary="#001" />
           </ListItem>
         </List>
