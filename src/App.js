@@ -1,24 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import List from "./components/list";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="app">
+      <header className="app__header">
+        Pokedex{" "}
+        <input
+          className="pokedex__searchBar"
+          type="text"
+          placeholder="Search"
+        />
       </header>
+      <main className="pokedex__main">
+        <List></List>
+      </main>
+      <footer className="app__footer">Navigation</footer>
     </div>
   );
 }
