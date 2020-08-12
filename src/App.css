@@ -13,6 +13,7 @@ https://coolors.co/000000-14213d-fca311-e5e5e5-ffffff
 
 .app__header {
   background-color: #14213d;
+  color: #fca311;
   display: grid;
   place-items: center;
   font-size: 1.2rem;

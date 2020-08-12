@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import List from "./components/list";
 
 function App() {
   return (
@@ -12,7 +13,9 @@ function App() {
           placeholder="Search"
         />
       </header>
-      <main className="pokedex__main">Pokemons</main>
+      <main className="pokedex__main">
+        <List></List>
+      </main>
       <footer className="app__footer">Navigation</footer>
     </div>
   );
