@@ -1,0 +1,40 @@
+/*
+Color Palette
+https://coolors.co/000000-14213d-fca311-e5e5e5-ffffff
+*/
+
+.app {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  color: #e5e5e5;
+}
+
+.app__header {
+  background-color: #14213d;
+  display: grid;
+  place-items: center;
+  font-size: 1.2rem;
+  padding: 10px;
+}
+
+.pokedex__searchBar {
+  color: #e5e5e5;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-style: none;
+  border-radius: 50px;
+}
+
+.pokedex__main {
+  background-color: #fff;
+  color: #000;
+  display: flex;
+  flex-direction: grid;
+  place-content: center;
+}
+.app__footer {
+  background-color: #14213d;
+  display: grid;
+  place-content: center;
+}
