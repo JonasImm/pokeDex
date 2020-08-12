@@ -8,9 +8,11 @@ https://coolors.co/000000-14213d-fca311-e5e5e5-ffffff
   width: 70vw;
   display: grid;
   grid-template-rows: auto 1fr auto;
+  background-color: #fff;
   color: #e5e5e5;
   margin: 0 auto;
-  border: solid 3px #fca311;
+  border: solid 5px #fca311;
+  border-radius: 15px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -27,7 +29,8 @@ https://coolors.co/000000-14213d-fca311-e5e5e5-ffffff
   display: grid;
   place-items: center;
   font-size: 1.5rem;
-  padding: 10px;
+  padding-bottom: 15px;
+  border-radius: 5px 5px 20px 20px;
 }
 
 .app__header > h1 {
@@ -44,5 +47,6 @@ https://coolors.co/000000-14213d-fca311-e5e5e5-ffffff
 .app__footer {
   background-color: #14213d;
   display: grid;
-  place-content: center;
+  place-items: center;
+  border-radius: 20px 20px 5px 5px;
 }

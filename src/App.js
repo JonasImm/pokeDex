@@ -6,6 +6,10 @@ import ListItemIcon from "./components/listItemIcon";
 import ListItemText from "./components/listItemText";
 import BulbasaurSrc from "./assets/bulbasaur.png";
 import Input from "./components/input";
+import MenuItemPokeMoves from "./components/menuItemPokeMoves";
+import MenuItemPokemon from "./components/menuItemPokemon";
+import MenuItemPokeItems from "./components/menuItemPokeItems";
+import Menu from "./components/menu";
 
 function App() {
   return (
@@ -23,7 +27,13 @@ function App() {
           </ListItem>
         </List>
       </main>
-      <footer className="app__footer">Navigation</footer>
+      <footer className="app__footer">
+        <Menu>
+          <MenuItemPokemon href="#" />
+          <MenuItemPokeMoves href="#" />
+          <MenuItemPokeItems href="#" />
+        </Menu>
+      </footer>
     </div>
   );
 }

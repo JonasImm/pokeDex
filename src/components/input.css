@@ -7,7 +7,7 @@
 
 @media only screen and (max-width: 600px) {
   .pokedex__searchElement {
-    width: 100vw;
+    width: 100%;
   }
 }
 
