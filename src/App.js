@@ -5,17 +5,14 @@ import ListItem from "./components/listItem";
 import ListItemIcon from "./components/listItemIcon";
 import ListItemText from "./components/listItemText";
 import BulbasaurSrc from "./assets/bulbasaur.png";
+import Input from "./components/input";
 
 function App() {
   return (
     <div className="app">
       <header className="app__header">
-        Pokedex{" "}
-        <input
-          className="pokedex__searchBar"
-          type="text"
-          placeholder="Search"
-        />
+        <h1>Pokedex</h1>
+        <Input />
       </header>
       <main className="pokedex__main">
         <List>

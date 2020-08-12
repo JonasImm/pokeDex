@@ -1,6 +1,5 @@
 .pokedex__img {
-  margin: auto 15px;
   max-width: 60px;
   max-height: 60px;
-  align-self: center;
+  object-fit: contain;
 }
