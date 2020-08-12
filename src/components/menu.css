@@ -11,11 +11,12 @@
   justify-content: center;
   text-decoration: none;
   color: #fca311;
-  margin: 15px 0;
+  margin: 10px 0;
 }
 
 .menu > a > img {
   max-width: 40px;
   max-height: 40px;
   object-fit: contain;
+  margin-bottom: 5px;
 }
