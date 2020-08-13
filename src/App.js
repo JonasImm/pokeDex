@@ -13,7 +13,7 @@ import { fetchPokemon } from "./api/pokeApi";
 import Loading from "./components/loading";
 
 function App() {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [pokemons, setPokemons] = React.useState(null);
 
   /* useEffect(() => {
