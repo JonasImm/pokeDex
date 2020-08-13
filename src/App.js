@@ -15,7 +15,7 @@ import Loading from "./components/loading";
 function App() {
   const [loading, setLoading] = useState(false);
   const [pokemons, setPokemons] = React.useState(null);
-  const [query, setQuery] = useEffect("");
+  /*  const [query, setQuery] = useEffect(""); */
 
   useEffect(() => {
     async function fetchData() {
@@ -36,8 +36,8 @@ function App() {
           <header className="app__header">
             <h1>Pokedex</h1>
             <Input
-              value={query}
-              onChange={(event) => setQuery(event.target.value)}
+            /* value={query}
+              onChange={(event) => setQuery(event.target.value)} */
             />
           </header>
           <main className="pokedex__main">
