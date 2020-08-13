@@ -16,14 +16,16 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [pokemons, setPokemons] = React.useState(null);
 
-  useEffect(() => {
+  /* useEffect(() => {
     setTimeout(() => setLoading(false), 30000);
-  });
+  }); */
 
   useEffect(() => {
     async function fetchData() {
+      setLoading(false);
       const pokedex = await fetchPokemon();
       setPokemons(pokedex);
+      setLoading(true);
     }
     fetchData();
   }, []);
@@ -31,6 +33,8 @@ function App() {
   return (
     <>
       {loading === false ? (
+        <Loading />
+      ) : (
         <div className="app">
           <header className="app__header">
             <h1>Pokedex</h1>
@@ -62,8 +66,6 @@ function App() {
             </Menu>
           </footer>
         </div>
-      ) : (
-        <Loading></Loading>
       )}
     </>
   );
