@@ -1,30 +1,37 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./App.css";
 import List from "./components/list";
 import ListItem from "./components/listItem";
 import ListItemIcon from "./components/listItemIcon";
 import ListItemText from "./components/listItemText";
-import BulbasaurSrc from "./assets/bulbasaur.png";
-import IvasaurSrc from "./assets/ivasaur.png";
 import Input from "./components/input";
 import MenuItemPokeMoves from "./components/menuItemPokeMoves";
 import MenuItemPokemon from "./components/menuItemPokemon";
 import MenuItemPokeItems from "./components/menuItemPokeItems";
 import Menu from "./components/menu";
+import { fetchPokemon } from "./api/pokeApi";
 
 function App() {
-  const [pokemons, setPokemons] = React.useState([]);
+  const [pokemons, setPokemons] = React.useState(null);
+
+  useEffect(() => {
+    async function fetchData() {
+      const pokedex = await fetchPokemon();
+      setPokemons(pokedex);
+    }
+    fetchData();
+  }, []);
 
   return (
     <div className="app">
       <header className="app__header">
         <h1>Pokedex</h1>
         <Input />
-        <button onClick={() => setPokemons("API")}>Get Pokemon</button>
+        {/* <button onClick={handleClick}>Get Pokemon</button> */}
       </header>
       <main className="pokedex__main">
         <List>
-          {pokemons.map((pokemon) => {
+          {pokemons?.map((pokemon) => {
             return (
               <ListItem href={pokemon.href} key={pokemon.id}>
                 <ListItemIcon

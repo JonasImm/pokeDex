@@ -1,4 +1,4 @@
-async function fetchPokemon() {
+export async function fetchPokemon() {
   const response = await fetch(
     "https://unpkg.com/pokemons@1.1.0/pokemons.json"
   );
@@ -9,9 +9,8 @@ async function fetchPokemon() {
   const pokemons = result.results.map((pokemon) => ({
     name: pokemon.name,
     id: pokemon.national_number,
-    imgSrc: pokemon.sprites.large,
+    imgSrc: pokemon.sprites.animated,
     href: `#${pokemon.name}`,
   }));
-
   return pokemons;
 }
