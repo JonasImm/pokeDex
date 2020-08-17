@@ -15,7 +15,7 @@ import Loading from "./components/loading";
 function App() {
   const [loading, setLoading] = useState(false);
   const [pokemons, setPokemons] = React.useState(null);
-  /*  const [query, setQuery] = useEffect(""); */
+  /*  const [query, setQuery] = useEffect(""); to be checked*/
 
   useEffect(() => {
     async function fetchData() {
