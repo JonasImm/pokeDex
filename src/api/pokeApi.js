@@ -10,7 +10,6 @@ export async function fetchPokemons() {
     name: pokemon.name,
     id: pokemon.national_number,
     imgSrc: pokemon.sprites.animated,
-    href: `#${pokemon.name}`,
   }));
   const uniquePokemons = pokemons.filter(
     (pokemon, index) =>

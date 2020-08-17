@@ -37,7 +37,10 @@ function Pokemons() {
         <List>
           {pokemons?.map((pokemon) => {
             return (
-              <ListItem href={pokemon.href} key={pokemon.id}>
+              <ListItem
+                href={`/pokemons/${pokemon.name.toLowerCase()}`}
+                key={pokemon.id}
+              >
                 <ListItemIcon
                   src={pokemon.imgSrc}
                   alt={`Picture of ${pokemon.name}`}
