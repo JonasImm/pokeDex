@@ -8,12 +8,16 @@ import { Switch, BrowserRouter as Router, Link, Route } from "react-router-dom";
 import Pokemons from "./pages/pokemons";
 import Moves from "./pages/moves";
 import Items from "./pages/items";
+import Pokemon from "./pages/pokemon";
 
 function App() {
   return (
     <Router>
       <div className="app">
         <Switch>
+          <Route path="/pokemons/:name">
+            <Pokemon />
+          </Route>
           <Route path="/pokemons">
             <Pokemons />
           </Route>

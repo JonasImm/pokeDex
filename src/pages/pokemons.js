@@ -5,7 +5,7 @@ import ListItem from "../components/listItem";
 import ListItemIcon from "../components/listItemIcon";
 import ListItemText from "../components/listItemText";
 import Input from "../components/input";
-import { fetchPokemon } from "../api/pokeApi";
+import { fetchPokemons } from "../api/pokeApi";
 import Loading from "../components/loading";
 
 function Pokemons() {
@@ -16,7 +16,7 @@ function Pokemons() {
   useEffect(() => {
     async function fetchData() {
       setLoading(false);
-      const pokedex = await fetchPokemon();
+      const pokedex = await fetchPokemons();
       setPokemons(pokedex);
       setLoading(true);
     }
