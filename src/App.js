@@ -4,8 +4,10 @@ import MenuItemPokeMoves from "./components/menuItemPokeMoves";
 import MenuItemPokemon from "./components/menuItemPokemon";
 import MenuItemPokeItems from "./components/menuItemPokeItems";
 import Menu from "./components/menu";
-import { Switch, Router, Link, Route } from "react-router-dom";
+import { Switch, BrowserRouter as Router, Link, Route } from "react-router-dom";
 import Pokemons from "./pages/pokemons";
+import Moves from "./pages/moves";
+import Items from "./pages/items";
 
 function App() {
   return (
@@ -15,15 +17,13 @@ function App() {
           <Route path="/pokemons">
             <Pokemons />
           </Route>
-        </Switch>
-        <Switch>
+
           <Route path="/moves">
-            <Pokemons />
+            <Moves />
           </Route>
-        </Switch>
-        <Switch>
+
           <Route path="/items">
-            <Pokemons />
+            <Items />
           </Route>
         </Switch>
         <footer className="app__footer">
