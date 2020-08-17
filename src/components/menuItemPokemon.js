@@ -1,12 +1,12 @@
 import React from "react";
 import pickachuSrc from "../assets/pickachu_icon.svg";
 
-function MenuItemPokemon({ children, href, alt }) {
+function MenuItemPokemon() {
   return (
-    <a className="menuItem__pokemon" href={href} alt={alt}>
+    <div className="menuItem__pokemon">
       <img src={pickachuSrc} alt="Pickachu Icon" />
       <span>Pokemon</span>
-    </a>
+    </div>
   );
 }
 
