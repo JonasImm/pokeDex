@@ -12,5 +12,9 @@ export async function fetchPokemon() {
     imgSrc: pokemon.sprites.animated,
     href: `#${pokemon.name}`,
   }));
-  return pokemons;
+  const uniquePokemons = pokemons.filter(
+    (pokemon, index) =>
+      pokemons.findIndex((other) => other.id === pokemon.id) === index
+  );
+  return uniquePokemons;
 }
