@@ -3,6 +3,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const { MongoClient } = require("mongodb");
 const { fetchPokemons } = require("./fetchPokemon");
+const { request, response } = require("express");
 
 const port = 3000;
 const app = express();
@@ -21,10 +22,15 @@ async function main() {
 
   app.post("/api/pokemons", async (request, response) => {
     console.log("post it");
-
-    //const { name, imgSrc, id } = request.body;
     await collection.insertMany(pokemons);
+    response.status(201).send("Toll. Es läuft");
   });
+
+  /*  app.delete("/api/delete_collection", async(request, response) => {
+      console.log("Alles ist weg");
+      response.send("Deleted");
+      await collection.deleteMany()
+  }) */
 
   app.get("/", (request, response) => {
     response.send("Boom. Läuft");
