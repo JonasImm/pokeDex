@@ -1,0 +1,11 @@
+.pokedex__listItemText {
+  flex-grow: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fca311;
+}
+.pokedex__listItemText > :last-child {
+  color: #e5e5e5;
+  font-weight: bolder;
+}

@@ -1,0 +1,10 @@
+.pokedex__listItem {
+  display: flex;
+  border-bottom: 1px solid #e4e4e4;
+  text-decoration: none;
+  align-items: center;
+}
+
+.pokedex__listItem > :first-child {
+  margin: 0 15px;
+}

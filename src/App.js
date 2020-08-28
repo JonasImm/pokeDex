@@ -1,23 +1,50 @@
 import React from "react";
 import "./App.css";
-import List from "./components/list";
+import MenuItemPokeMoves from "./components/menuItemPokeMoves";
+import MenuItemPokemon from "./components/menuItemPokemon";
+import MenuItemPokeItems from "./components/menuItemPokeItems";
+import Menu from "./components/menu";
+import { Switch, BrowserRouter as Router, Link, Route } from "react-router-dom";
+import Pokemons from "./pages/pokemons";
+import Moves from "./pages/moves";
+import Items from "./pages/items";
+import Pokemon from "./pages/pokemon";
 
 function App() {
   return (
-    <div className="app">
-      <header className="app__header">
-        Pokedex{" "}
-        <input
-          className="pokedex__searchBar"
-          type="text"
-          placeholder="Search"
-        />
-      </header>
-      <main className="pokedex__main">
-        <List></List>
-      </main>
-      <footer className="app__footer">Navigation</footer>
-    </div>
+    <Router>
+      <div className="app">
+        <Switch>
+          <Route path="/pokemons/:name">
+            <Pokemon />
+          </Route>
+          <Route path="/pokemons">
+            <Pokemons />
+          </Route>
+
+          <Route path="/moves">
+            <Moves />
+          </Route>
+
+          <Route path="/items">
+            <Items />
+          </Route>
+        </Switch>
+        <footer className="app__footer">
+          <Menu>
+            <Link to="/pokemons">
+              <MenuItemPokemon />
+            </Link>
+            <Link to="/moves">
+              <MenuItemPokeMoves />
+            </Link>
+            <Link to="/items">
+              <MenuItemPokeItems />
+            </Link>
+          </Menu>
+        </footer>
+      </div>
+    </Router>
   );
 }
 
