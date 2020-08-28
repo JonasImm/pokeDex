@@ -1,0 +1,23 @@
+.pokemon {
+  background-color: #ffffff;
+  color: #fca311;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pokemon__header > button {
+  background-color: transparent;
+  border-style: none;
+}
+
+.pokemon__header img {
+  width: 20px;
+  height: 20px;
+}
+
+.pokemon__info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}

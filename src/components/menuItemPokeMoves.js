@@ -1,12 +1,12 @@
 import React from "react";
 import pokeballSrc from "../assets/pokeball_icon.svg";
 
-function MenuItemPokeMoves({ children, href, alt }) {
+function MenuItemPokeMoves() {
   return (
-    <a className="menuItem__pokeMoves" href={href} alt={alt}>
+    <div className="menuItem__pokeMoves">
       <img src={pokeballSrc} alt="Pickachu Icon" />
       <span>Moves</span>
-    </a>
+    </div>
   );
 }
 

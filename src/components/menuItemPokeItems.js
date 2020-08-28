@@ -1,12 +1,12 @@
 import React from "react";
 import itemSrc from "../assets/item_icon.svg";
 
-function MenuItemPokeItems({ children, href, alt }) {
+function MenuItemPokeItems() {
   return (
-    <a className="menuItem__pokeItems" href={href} alt={alt}>
+    <div className="menuItem__pokeItems">
       <img src={itemSrc} alt="Item Icon" />
       <span>Items</span>
-    </a>
+    </div>
   );
 }
 

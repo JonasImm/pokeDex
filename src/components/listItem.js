@@ -1,11 +1,12 @@
 import React from "react";
 import "./listItem.css";
+import { Link } from "react-router-dom";
 
 function ListItem({ href, children }) {
   return (
-    <a className="pokedex__listItem" href={href}>
+    <Link className="pokedex__listItem" to={href}>
       {children}
-    </a>
+    </Link>
   );
 }
 
